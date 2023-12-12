@@ -10,7 +10,7 @@ strokeInput.addEventListener('input', () => {
 
   function setStrokeWidth(elements, strokeWidth = '1.5') {
     for (const el of elements) {
-      el.getAttribute('stroke-width') && el.setAttribute('stroke-width', setStrokeWidth);
+      el.getAttribute('stroke-width') && el.setAttribute('stroke-width', strokeWidth);
     }
   }
 
