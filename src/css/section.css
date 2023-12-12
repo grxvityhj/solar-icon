@@ -58,10 +58,10 @@
 /* **** Section - icon **** */
 /* ************************ */
 .section-icon .section-container {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   gap: 56px;
-  margin-bottom: 64px;
+  margin-bottom: 56px; */
 }
 
 .section-wrap {
