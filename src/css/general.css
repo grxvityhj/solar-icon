@@ -53,14 +53,15 @@ button {
 blockquote {
   margin: 12px auto;
   padding: 10px 16px;
-  font-weight: bold;
-  border-radius: 12px;
+  font-weight: 600;
+  border-radius: 7px;
   letter-spacing: 0.45px;
   background-color: var(--c-blockq);
 }
 
 input {
-  font-weight: 700;
+  color: var(--c-font);
+  font-weight: 600;
   font-family: inherit;
   border: none;
   outline: none;
@@ -232,7 +233,7 @@ body {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  padding: 12px 0;
+  padding: 18px 0;
   background-color: var(--c-bg);
   z-index: 9;
 }
@@ -240,6 +241,7 @@ body {
 .toolbar .section-container {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
 .tab {
@@ -264,7 +266,7 @@ body {
   gap: 12px;
   padding: 8px 12px;
   border: 1px solid var(--c-border);
-  border-radius: var(--round);
+  border-radius: 7px;
   background-color: var(--c-item-bg);
   transition: border-color .4s ease;
 }
@@ -286,6 +288,7 @@ body {
 
 .search-input {
   display: block;
+  color: var(--c-font);
 }
 /* **************** */
 /*
@@ -317,6 +320,7 @@ body {
   color: var(--c-font);
   padding: 8px 18px;
   text-align: center;
+  background-color: var(--c-item-bg);
 }
 
 .stroke-input::placeholder {
@@ -335,7 +339,7 @@ body {
 /* ************* */
 .tab {
   width: fit-content;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   border: 1px solid var(--c-border);
   border-radius: 1000px;
   background-color: var(--c-item-bg);
@@ -379,9 +383,9 @@ body {
   position: fixed;
   bottom: 16px;
   right: 12px;
-  border: 2px solid var(--c-sub);
+  border: 1px solid var(--c-border);
   border-radius: 50%;
-  background-color: var(--c-wrap);
+  background-color: var(--c-item-bg);
   transition: all var(--duration);
   opacity: 0;
   z-index: 99;
@@ -394,7 +398,7 @@ body {
 }
 
 .top-btn:hover {
-  border-color: var(--c-primary);
+  /* border-color: var(--c-primary); */
   transform: scale(1.05);
 }
 
