@@ -83,12 +83,11 @@
 }
 
 .section-title {
-  font-weight: 600;
 }
 
 .section-desc {
   margin-bottom: 2px;
-  /* font-weight: 700; */
+  font-weight: 600;
   opacity: 0.7;
 }
 
