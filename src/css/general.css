@@ -369,4 +369,36 @@ body {
 /* ******************** */
 /* **** Top button **** */
 /* ******************** */
+.top-btn {
+  width: 36px;
+  height: 36px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: fixed;
+  bottom: 16px;
+  right: 12px;
+  border: 1px solid var(--c-border);
+  border-radius: 50%;
+  background-color: var(--c-item-bg);
+  transition: all var(--duration);
+  opacity: 0;
+  z-index: 99;
+}
+
+.top-btn svg {
+  width: 16px;
+  height: 16px;
+  transition: all var(--duration);
+}
+
+.top-btn:hover {
+  /* border-color: var(--c-primary); */
+  transform: scale(1.05);
+}
+
+.top-btn:hover svg {
+  color: var(--c-primary);
+}
 /* ******************** */
