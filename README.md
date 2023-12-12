@@ -51,6 +51,6 @@ Example for `linear` type with `stroke-width` `2`:
 
 ### Disclaimer
 
-**I do not own any of the icons**. All rights belong to Vuesax.
+**I do not own any of the icons**. All rights belong to 480 Design.
 
 This project fully supports `linear` and `bold` style only.
