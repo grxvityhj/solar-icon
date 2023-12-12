@@ -115,7 +115,7 @@
   border-color: var(--c-primary);
 }
 
-.section--linear .icon-content:hover svg {
+/* .section--linear .icon-content:hover svg {
   color: var(--c-primary);
 }
 
@@ -125,7 +125,7 @@
 
 .icon-content svg {
   transition: all var(--duration);
-}
+} */
 
 .icon-label {
   display: flex;
