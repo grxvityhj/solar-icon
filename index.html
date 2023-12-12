@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+    <link rel="stylesheet" href="./src/css/general.css" />
+    <link rel="stylesheet" href="./src/css/section.css" />
+    <link rel="stylesheet" href="./src/css/tooltip.css" />
+    <link rel="stylesheet" href="./src/css/query.css" />
+    <script defer src="./src/js/app.js"></script>
+    <script defer src="./src/js/custom.js"></script>
+    <script defer src="./src/js/search.js"></script>
+    <script defer src="./src/js/toggle.js"></script>
+    <script defer src="./src/js/tooltip.js"></script>
+    <title>Solar Icon - Cheat sheet</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="search">
+        <div class="search-wrap">
+          <div class="search-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M22 22L20 20" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <input type="text" class="search-input" placeholder="search">
+        </div>
+      </div>
+      <div class="stroke-wrap">
+        <div class="stroke-label">stroke width</div>
+        <input type="text" class="stroke-input" placeholder="1.5">
+      </div>
+    </header>
+    <div class="wrap">
+      <div class="tooltip">
+        Copied!
+      </div>
+      <div class="modal">
+        <div class="modal-wrap">
+          <div>
+            <div class="modal-label-wrap">
+              <p class="modal-txt">Full code</p>
+              <button class="modal-btn full-btn" data-clipboard-target=".block--full">
+                <i class="solar-icon btn" stroke-width="2" icon="copy"></i>
+              </button>
+            </div>
+            <blockquote class="block--full"></blockquote>
+          </div>
+          <div>
+            <div class="modal-label-wrap">
+              <p class="modal-txt">Icon name</p>
+              <button class="modal-btn icon-btn" data-clipboard-target=".block--icon">
+                <i class="solar-icon btn" stroke-width="2" icon="copy"></i>
+              </button>
+            </div>
+            <blockquote class="block--icon"></blockquote>
+          </div>
+        </div>
+        <div class="modal-bg"></div>
+      </div>
+      <main class="main">
+        <section class="section section-hero">
+          <div class="section-container">
+            <div class="hero-top">
+              <div class="hero--l">
+                <span>Solar Icon Set</span>
+              </div>
+            </div>
+            <div class="hero-btm">
+              <a href="https://github.com/grxvityhj/solar-icon" target="_blank">
+                <button class="hero-btn hero-btn--sub">
+                  How to use
+                </button>
+              </a>
+            </div>
+          </div>
+        </section>
+        <div class="tab">
+          <div class="tab-wrap">
+            <div class="tab-item tab--linear tab--active">linear</div>
+            <div class="tab-item tab--bold">bold</div>
+          </div>
+        </div>
+        <section class="section section-icon section--linear section--active">
+          <div class="section-container">
+            <!-- Arrows -->
+            <div class="section-wrap active">
+              <div class="section-title-wrap">
+                <div>
+                  <h2 class="section-title">Arrows</h2>
+                  <p class="section-desc">arrow, pointer</p>
+                </div>
+              </div>
+              <div class="icon-wrap active">
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-left"></i>
+                  <div class="icon-label">arrow-left</div>
+                  <div class="search-tag">arrow pointer arrow left arrow-left &lt; ←</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-right"></i>
+                  <div class="icon-label">arrow-right</div>
+                  <div class="search-tag">arrow pointer arrow right arrow-right &gt; →</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-up"></i>
+                  <div class="icon-label">arrow-up</div>
+                  <div class="search-tag">arrow pointer arrow up arrow-up ^ ↑</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-down"></i>
+                  <div class="icon-label">arrow-down</div>
+                  <div class="search-tag">arrow pointer arrow down arrow-down ↓</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-up-left"></i>
+                  <div class="icon-label">arrow-up-left</div>
+                  <div class="search-tag">arrow pointer arrow up left arrow-up-left ↖</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-up-right"></i>
+                  <div class="icon-label">arrow-up-right</div>
+                  <div class="search-tag">arrow pointer arrow up right arrow-up-right ↗</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-down-left"></i>
+                  <div class="icon-label">arrow-down-left</div>
+                  <div class="search-tag">arrow pointer arrow down left arrow-down-left ↙</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-down-right"></i>
+                  <div class="icon-label">arrow-down-right</div>
+                  <div class="search-tag">arrow pointer arrow down right arrow-down-right ↘</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-circle-left"></i>
+                  <div class="icon-label">arrow-circle-left</div>
+                  <div class="search-tag">arrow pointer arrow circle left arrow-circle-left &lt; ←</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-circle-right"></i>
+                  <div class="icon-label">arrow-circle-right</div>
+                  <div class="search-tag">arrow pointer arrow circle right arrow-circle-right &gt; →</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-circle-up"></i>
+                  <div class="icon-label">arrow-circle-up</div>
+                  <div class="search-tag">arrow pointer arrow circle up arrow-circle-up ^ ↑</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-circle-down"></i>
+                  <div class="icon-label">arrow-circle-down</div>
+                  <div class="search-tag">arrow pointer arrow circle down arrow-circle-down ↓</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-circle-up-left"></i>
+                  <div class="icon-label">arrow-circle-up-left</div>
+                  <div class="search-tag">arrow pointer arrow circle up left arrow-circle-up-left ↖</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-circle-up-right"></i>
+                  <div class="icon-label">arrow-circle-up-right</div>
+                  <div class="search-tag">arrow pointer arrow circle up right arrow-circle-up-right ↗</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-circle-down-left"></i>
+                  <div class="icon-label">arrow-circle-down-left</div>
+                  <div class="search-tag">arrow pointer arrow circle down left arrow-circle-down-left ↙</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-circle-down-right"></i>
+                  <div class="icon-label">arrow-circle-down-right</div>
+                  <div class="search-tag">arrow pointer arrow circle down right arrow-circle-down-right ↘</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-square-left"></i>
+                  <div class="icon-label">arrow-square-left</div>
+                  <div class="search-tag">arrow pointer arrow square left arrow-square-left &lt; ←</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-square-right"></i>
+                  <div class="icon-label">arrow-square-right</div>
+                  <div class="search-tag">arrow pointer arrow square right arrow-square-right &gt; →</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-square-up"></i>
+                  <div class="icon-label">arrow-square-up</div>
+                  <div class="search-tag">arrow pointer arrow square up arrow-square-up ^ ↑</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-square-down"></i>
+                  <div class="icon-label">arrow-square-down</div>
+                  <div class="search-tag">arrow pointer arrow square down arrow-square-down ↓</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-square-up-left"></i>
+                  <div class="icon-label">arrow-square-up-left</div>
+                  <div class="search-tag">arrow pointer arrow square up left arrow-square-up-left ↖</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-square-up-right"></i>
+                  <div class="icon-label">arrow-square-up-right</div>
+                  <div class="search-tag">arrow pointer arrow square up right arrow-square-up-right ↗</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-square-down-left"></i>
+                  <div class="icon-label">arrow-square-down-left</div>
+                  <div class="search-tag">arrow pointer arrow square down left arrow-square-down-left ↙</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="arrow-square-down-right"></i>
+                  <div class="icon-label">arrow-square-down-right</div>
+                  <div class="search-tag">arrow pointer arrow square down right arrow-square-down-right ↘</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="chevron-left"></i>
+                  <div class="icon-label">chevron-left</div>
+                  <div class="search-tag">arrow pointer chevron left chevron-left</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="chevron-right"></i>
+                  <div class="icon-label">chevron-right</div>
+                  <div class="search-tag">arrow pointer chevron right chevron-right</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="chevron-up"></i>
+                  <div class="icon-label">chevron-up</div>
+                  <div class="search-tag">arrow pointer chevron up chevron-up</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="chevron-down"></i>
+                  <div class="icon-label">chevron-down</div>
+                  <div class="search-tag">arrow pointer chevron down chevron-down</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="chevrons-left"></i>
+                  <div class="icon-label">chevrons-left</div>
+                  <div class="search-tag">arrow pointer chevrons left chevrons-left</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="chevrons-right"></i>
+                  <div class="icon-label">chevrons-right</div>
+                  <div class="search-tag">arrow pointer chevrons right chevrons-right</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="chevrons-up"></i>
+                  <div class="icon-label">chevrons-up</div>
+                  <div class="search-tag">arrow pointer chevrons up chevrons-up</div>
+                </div>
+                <div class="icon-content">
+                  <i class="solar-icon" type="linear" stroke-width="1.5" icon="chevrons-down"></i>
+                  <div class="icon-label">chevrons-down</div>
+                  <div class="search-tag">arrow pointer chevrons down chevrons-down</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <button class="top-btn">
+        <i class="solar-icon" type="linear" stroke-width="2" icon="chevron-up"></i>
+      </button>
+    </div>
+  </body>
+</html>
