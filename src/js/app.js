@@ -23,14 +23,16 @@ const generateSolarIcon = async function (icon, type, iconName, iconWidth) {
     path.getAttribute('fill') && path.setAttribute('fill', 'currentColor');
   }
 
-  for (const circle of svgCircle) {
-    circle.getAttribute('stroke-width') &&
-      circle.setAttribute('stroke-width', iconWidth);
+  if (svgCircle.length) {
+    for (const circle of svgCircle) {
+      circle.getAttribute('stroke-width') &&
+        circle.setAttribute('stroke-width', iconWidth);
 
-    circle.getAttribute('stroke') &&
-      circle.setAttribute('stroke', 'currentColor');
+      circle.getAttribute('stroke') &&
+        circle.setAttribute('stroke', 'currentColor');
 
-    circle.getAttribute('fill') && circle.setAttribute('fill', 'currentColor');
+      circle.getAttribute('fill') && circle.setAttribute('fill', 'currentColor');
+    }
   }
 };
 
