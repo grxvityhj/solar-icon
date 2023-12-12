@@ -2,13 +2,15 @@
 /* **** Global reset **** */
 /* ********************** */
 :root {
-  --c-bg: #f9f9f9;
-  --c-wrap: #fff;
+  --c-bg: #181818;
+  /* --c-wrap: #fff; */
+  --c-item-bg: #1D1D1D;
+  --c-border: #353535;
   --c-general: #333;
-  --c-font: #222;
+  --c-font: #f6f6f6;
   --c-sub: #eee;
-  --c-blockq: #f7f7f7;
-  --c-primary: #222;
+  --c-blockq: #1D1D1D;
+  --c-primary: #664EFF;
 
   --f-size-s: 12px;
   --f-size-m: 14px;
@@ -107,8 +109,8 @@ body {
   color: var(--c-font);
   font-size: var(--f-size-m);
   line-height: 1.4;
-  font-weight: 700;
-  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
   background-color: var(--c-bg);
   animation: fadeIn 1.5s forwards;
   opacity: 0;
@@ -225,6 +227,19 @@ body {
   background-color: var(--c-bg);
   z-index: 9;
 }
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  padding: 12px 0;
+}
+
+.tab {
+  margin-left: auto;
+}
 /* **************** */
 /*
 
@@ -243,8 +258,14 @@ body {
   align-items: center;
   gap: 12px;
   padding: 8px 12px;
-  border: 2.5px solid var(--c-general);
+  border: 1px solid var(--c-border);
   border-radius: var(--round);
+  background-color: var(--c-item-bg);
+  transition: border-color .4s ease;
+}
+
+.search-wrap:focus-within {
+  border-color: var(--c-primary);
 }
 
 .search-icon {
