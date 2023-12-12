@@ -3,7 +3,7 @@
 const generateSolarIcon = async function (icon, type, iconName, iconWidth) {
   if (!iconName) return;
 
-  const URL = `https://grxvityhj.github.io/solar-icon-test/icon`;
+  const URL = `https://grxvityhj.github.io/solar-icon/icon`;
 
   const res = await fetch(`${URL}/${type}/${iconName}.svg`);
   const data = await res.text();
