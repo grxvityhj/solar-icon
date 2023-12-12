@@ -235,7 +235,7 @@ body {
   top: 0;
   padding: 18px 0;
   background-color: var(--c-bg);
-  z-index: 9;
+  z-index: 99;
 }
 
 .toolbar .section-container {
