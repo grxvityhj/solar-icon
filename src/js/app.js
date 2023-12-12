@@ -62,7 +62,6 @@ iconContentAll.forEach(el => {
 
     const content = e.target.closest('.icon-content');
     const code = content.querySelector('.solar-icon');
-    const brand = code.classList.contains('brand') ? ' brand' : '';
     const type = code.getAttribute('type').trim();
     const strokeWidth = code.getAttribute('stroke-width') ? code.getAttribute('stroke-width').trim() : '';
     const icon = code.getAttribute('icon').trim();
