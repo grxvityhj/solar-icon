@@ -93,6 +93,7 @@
 .section-icon {
   flex-direction: column;
   gap: 56px;
+  margin-bottom: 64px;
 }
 
 .section-wrap {
