@@ -33,7 +33,7 @@
 
 .hero-btn:link,
 .hero-btn:visited {
-  padding: 8px 14px;
+  padding: 10px 24px;
   font-size: 18px;
   border: 1px solid var(--c-primary);
   border-radius: 1000px;
