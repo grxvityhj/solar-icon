@@ -2,37 +2,27 @@ const strokeInput = document.querySelector('.stroke-input');
 
 strokeInput.addEventListener('input', () => {
   const pathAll = document.querySelectorAll('path');
-  const circleAll = document.querySelectorAll('.circle');
+  const circleAll = document.querySelectorAll('circle');
   const iconAll = document.querySelectorAll('.section-icon .solar-icon');
   const customWidth = strokeInput.value.trim();
 
   const reg = /^[+]?\d+(\.\d+)?$/;
 
+  function setStrokeWidth(elements, strokeWidth = '1.5') {
+    for (const el of elements) {
+      el.getAttribute('stroke-width') && el.setAttribute('stroke-width', setStrokeWidth);
+    }
+  }
+
   if (customWidth === '') {
-    for (const icon of iconAll) {
-      icon.getAttribute('stroke-width') && icon.setAttribute('stroke-width', '1.5');
-    }
-  
-    for (const path of pathAll) {
-      path.getAttribute('stroke-width') && path.setAttribute('stroke-width', '1.5');
-    }
-  
-    for (const circle of circleAll) {
-      circle.getAttribute('stroke-width') && circle.setAttribute('stroke-width', '1.5');
-    }
+    setStrokeWidth(iconAll);
+    setStrokeWidth(pathAll);
+    setStrokeWidth(circleAll);
   };
   
   if (!reg.test(customWidth)) return;
 
-  for (const icon of iconAll) {
-    icon.getAttribute('stroke-width') && icon.setAttribute('stroke-width', customWidth);
-  }
-
-  for (const path of pathAll) {
-    path.getAttribute('stroke-width') && path.setAttribute('stroke-width', customWidth);
-  }
-  
-  for (const circle of circleAll) {
-    circle.getAttribute('stroke-width') && circle.setAttribute('stroke-width', customWidth);
-  }
+  setStrokeWidth(iconAll, customWidth);
+  setStrokeWidth(pathAll, customWidth);
+  setStrokeWidth(circleAll, customWidth);
 });
