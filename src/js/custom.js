@@ -1,8 +1,8 @@
 const strokeInput = document.querySelector('.stroke-input');
 
 strokeInput.addEventListener('input', () => {
-  const pathAll = document.querySelectorAll('path');
-  const circleAll = document.querySelectorAll('circle');
+  const pathAll = document.querySelectorAll('.section-icon path');
+  const circleAll = document.querySelectorAll('.section-icon circle');
   const iconAll = document.querySelectorAll('.section-icon .solar-icon');
   const customWidth = strokeInput.value.trim();
 
