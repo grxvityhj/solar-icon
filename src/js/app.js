@@ -1,6 +1,6 @@
 'use strict';
 
-const generateSolarIcon = async function (icon, type, iconName, iconWidth) {
+async function generateSolarIcon(icon, type, iconName, iconWidth) {
   if (!iconName) return;
 
   const URL = `https://grxvityhj.github.io/solar-icon/icon`;
@@ -14,29 +14,28 @@ const generateSolarIcon = async function (icon, type, iconName, iconWidth) {
   
   const svgPath = icon.querySelectorAll('path');
   const svgCircle = icon.querySelectorAll('circle');
+  const svgRect = icon.querySelectorAll('rect');
 
-  for (const path of svgPath) {
-    path.getAttribute('stroke-width') &&
-      path.setAttribute('stroke-width', iconWidth);
-
-    path.getAttribute('stroke') &&
-      path.setAttribute('stroke', 'currentColor');
-
-    path.getAttribute('fill') && path.setAttribute('fill', 'currentColor');
-  }
+  for (const path of svgPath) setSvg(path, iconWidth);
 
   if (svgCircle.length) {
-    for (const circle of svgCircle) {
-      circle.getAttribute('stroke-width') &&
-        circle.setAttribute('stroke-width', iconWidth);
+    for (const circle of svgCircle) setSvg(circle, iconWidth);
+  }
 
-      circle.getAttribute('stroke') &&
-        circle.setAttribute('stroke', 'currentColor');
-
-      circle.getAttribute('fill') && circle.setAttribute('fill', 'currentColor');
-    }
+  if (svgRect.length) {
+    for (const rect of svgRect) setSvg(rect, iconWidth);
   }
 };
+
+function setSvg(svgEl, iconWidth) {
+  svgEl.getAttribute('stroke-width') &&
+    svgEl.setAttribute('stroke-width', iconWidth);
+
+  svgEl.getAttribute('stroke') &&
+    svgEl.setAttribute('stroke', 'currentColor');
+
+  svgEl.getAttribute('fill') && svgEl.setAttribute('fill', 'currentColor');
+}
 
 const generator =() => {
     const activeSection = document.querySelector('.section--active');
