@@ -48,10 +48,14 @@ const slideToggleHandler = container => {
 
 sectionIcon.addEventListener('click',e => {
   const toggleBtn = e.target.closest('.section-toggle-btn');
-  const section = e.target.closest('.section-wrap');
-  const iconWrap = section.querySelector('.icon-wrap')
 
   if (!toggleBtn) return;
+
+  const section = e.target.closest('.section-wrap');
+
+  if (!section) return;
+
+  const iconWrap = section.querySelector('.icon-wrap')
 
   slideToggleHandler(iconWrap);
   section.classList.toggle('active')
