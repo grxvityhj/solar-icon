@@ -7,6 +7,8 @@ const generateSolarIcon = async function (icon, type, iconName, iconWidth) {
 
   const res = await fetch(`${URL}/${type}/${iconName}.svg`);
   const data = await res.text();
+  
+  if (!data.includes('svg')) return;
 
   icon.innerHTML = data !== undefined ? data : '';
   
