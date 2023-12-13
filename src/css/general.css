@@ -53,7 +53,7 @@ button {
 blockquote {
   margin: 12px auto;
   padding: 10px 16px;
-  font-weight: 600;
+  font-weight: 400;
   border-radius: 7px;
   letter-spacing: 0.45px;
   background-color: var(--c-blockq);
