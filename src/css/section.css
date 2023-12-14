@@ -29,6 +29,7 @@
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 24px;
+  transition: color var(--duration);
 }
 
 .hero-btn:link,
@@ -84,11 +85,13 @@
 
 .section-title {
   font-weight: 600;
+  transition: color var(--duration);
 }
 
 .section-desc {
   margin-bottom: 2px;
   font-weight: 400;
+  transition: color var(--duration);
   opacity: 0.7;
 }
 
@@ -96,7 +99,6 @@
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 18px;
-  transition: all var(--duration);
 }
 
 .icon-content {
@@ -109,7 +111,7 @@
   border: 1px solid var(--c-border);
   border-radius: 10px;
   background-color: var(--c-item-bg);
-  transition: all var(--duration);
+  transition: border-color var(--duration), background-color var(--duration);
   cursor: pointer;
 }
 
@@ -134,5 +136,6 @@
   justify-content: center;
   align-items: center;
   font-size: var(--f-size-s);
+  transition: color var(--duration);
 }
 /* ************************ */
