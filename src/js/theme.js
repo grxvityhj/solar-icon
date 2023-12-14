@@ -1,7 +1,5 @@
 'use strict';
 
-localStorage.theme && document.documentElement.setAttribute('data-theme', localStorage.theme);
-
 const themeBtn = document.querySelector('.theme-btn');
 
 function setTheme() {

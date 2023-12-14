@@ -15,6 +15,7 @@ async function generateSolarIcon(icon, type, iconName, iconWidth) {
   const svgPath = icon.querySelectorAll('path');
   const svgCircle = icon.querySelectorAll('circle');
   const svgRect = icon.querySelectorAll('rect');
+  const svgEllipse = icon.querySelectorAll('ellipse');
 
   for (const path of svgPath) setSvg(path, iconWidth);
 
@@ -24,6 +25,10 @@ async function generateSolarIcon(icon, type, iconName, iconWidth) {
 
   if (svgRect.length) {
     for (const rect of svgRect) setSvg(rect, iconWidth);
+  }
+
+  if (svgEllipse.length) {
+    for (const ellipse of svgEllipse) setSvg(ellipse, iconWidth);
   }
 };
 
