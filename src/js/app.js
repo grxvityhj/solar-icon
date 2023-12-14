@@ -12,10 +12,10 @@ async function generateSolarIcon(icon, type, iconName, iconWidth) {
 
   icon.innerHTML = data !== undefined ? data : '';
   
-  const svgPath = icon.querySelectorAll('path');
-  const svgCircle = icon.querySelectorAll('circle');
-  const svgRect = icon.querySelectorAll('rect');
-  const svgEllipse = icon.querySelectorAll('ellipse');
+  const svgPath = icon.querySelectorAll('svg path');
+  const svgCircle = icon.querySelectorAll('svg circle');
+  const svgRect = icon.querySelectorAll('svg rect');
+  const svgEllipse = icon.querySelectorAll('svg ellipse');
 
   for (const path of svgPath) setSvg(path, iconWidth);
 

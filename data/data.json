@@ -1,0 +1,91 @@
+{
+  "solar": [
+    {
+      "id": 492370,
+      "title": "Arrows",
+      "subtitle": "arrow pointer",
+      "icons": [
+        {
+          "iconName": "arrow-left",
+          "keyword": ["←"]
+        },
+        {
+          "iconName": "arrow-right",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-up",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-down",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-up-left",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-up-right",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-down-left",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-down-right",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-circle-left",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-circle-right",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-circle-up",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-circle-down",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-circle-up-left",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-circle-up-right",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-circle-down-left",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-circle-down-right",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-square-left",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-square-right",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-square-up",
+          "keyword": []
+        },
+        {
+          "iconName": "arrow-square-down",
+          "keyword": []
+        }
+      ]
+    }
+  ]
+}
