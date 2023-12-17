@@ -42,10 +42,20 @@
   transition: all var(--duration);
 }
 
+:root[data-theme='light'] .hero-btn:link,
+:root[data-theme='light'] .hero-btn:visited {
+  color: var(--c-primary);
+}
+
 .hero-btn:hover,
 .hero-btn:active {
   color: #fff;
   background-color: var(--c-primary);
+}
+
+:root[data-theme='light'] .hero-btn:hover,
+:root[data-theme='light'] .hero-btn:active {
+  color: #fff;
 }
 /* ************************ */
 /*
@@ -98,7 +108,7 @@
 .icon-wrap {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 18px;
+  gap: 14px;
 }
 
 .icon-content {
