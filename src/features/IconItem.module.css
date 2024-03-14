@@ -1,0 +1,37 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  text-align: center;
+  aspect-ratio: 3 / 3.5;
+  border: 2px solid var(--color-black-750);
+  border-radius: 12px;
+  background-color: var(--color-black-850);
+  transition: border-color var(--transition);
+  cursor: pointer;
+}
+
+.item svg {
+  transition: color var(--transition);
+}
+
+.item:hover {
+  border-color: var(--color-primary-600);
+}
+
+.item:hover svg {
+  color: var(--color-primary-600);
+}
+
+.svg svg {
+  width: 36px;
+  height: 36px;
+}
+
+.label {
+  font-size: var(--font-size-xs);
+  line-height: 1.6;
+}

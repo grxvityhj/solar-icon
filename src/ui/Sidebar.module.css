@@ -1,0 +1,30 @@
+.sidebar {
+  width: var(--sb-width);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding: 48px 36px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  border-right: 1px solid var(--color-black-750);
+  background-color: var(--color-black-850);
+  overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 19px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  height: 10%;
+  background-color: var(--color-black-600);
+  border-radius: 100px;
+  border: 6px solid transparent;
+  background-clip: padding-box;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: var(--color-black-800);
+}

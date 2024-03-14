@@ -1,0 +1,38 @@
+.main {
+  width: 1200px;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 84px;
+  padding: 0 64px 128px 64px;
+  position: relative;
+  background-color: var(--color-black-900);
+  overflow-y: auto;
+}
+
+/* .main::-webkit-scrollbar {
+  display: none;
+} */
+
+.main::-webkit-scrollbar {
+  width: 19px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  height: 10%;
+  background-color: var(--color-black-600);
+  border-radius: 100px;
+  border: 6px solid transparent;
+  background-clip: padding-box;
+}
+
+.main::-webkit-scrollbar-track {
+  background-color: var(--color-black-900);
+}
+
+@media only screen and (max-width: 1485px) {
+  .main {
+    width: 100%;
+    max-width: 1200px;
+  }
+}

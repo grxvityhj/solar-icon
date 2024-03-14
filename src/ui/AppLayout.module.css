@@ -1,0 +1,14 @@
+.app {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto 1200px;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  background-color: var(--color-black-850);
+}
+
+@media only screen and (max-width: 1485px) {
+  .app {
+    grid-template-columns: auto 1fr;
+  }
+}

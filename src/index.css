@@ -1,0 +1,87 @@
+:root {
+  --color-black-50: #fcfcfc;
+  --color-black-600: #636363;
+  --color-black-700: #4b4b4b;
+  --color-black-750: #3b3b3b;
+  --color-black-850: #2f2f2f;
+  --color-black-900: #262626;
+
+  --color-primary-600: #ff916b;
+  --color-primary-650: #f38a65;
+
+  --font-size-xs: 11px;
+  --font-size-sm: 13px;
+  --font-size-md: 15px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+
+  --sb-width: 300px;
+
+  --font-family: 'Poppins', 'Inter', 'Pretendard', sans-serif;
+
+  --duration: 0.3s;
+  --transition: var(--duration) ease;
+
+  --element-bg: rgba(255, 255, 255, 0.05);
+  --element-bg-hover: rgba(255, 255, 255, 0.12);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  color: var(--color-black-50);
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  font-family: var(--font-family);
+  line-height: 1;
+  background-color: var(--color-black-900);
+}
+
+#root {
+  overflow-y: hidden;
+}
