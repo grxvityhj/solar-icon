@@ -24,7 +24,7 @@ export const categories = [
   { category: 'map', title: 'Map & Location' },
   { category: 'medicine', title: 'Medicine' },
   { category: 'menu', title: 'Menu' },
-  { category: 'messages', title: 'Messages, Convertation' },
+  { category: 'messages', title: 'Messages, Conversation' },
   { category: 'nature', title: 'Nature, Travel' },
   { category: 'notes', title: 'Notes' },
   { category: 'notifications', title: 'Notifications' },
@@ -40,6 +40,7 @@ export const categories = [
   { category: 'transport', title: 'Transport, Parts, Service' },
   { category: 'user', title: 'User' },
   { category: 'video', title: 'Video, Audio, Sound' },
+  { category: 'weather', title: 'Weather' },
 ];
 
 export const iconsList = [
@@ -888,7 +889,7 @@ export const iconsList = [
     ],
   },
   {
-    category_title: 'Messages, Convertation',
+    category_title: 'Messages, Conversation',
     category: 'messages',
     icon_list: [
       { label: 'chat-1.svg', keyword: 'messages conversation' },
@@ -1588,7 +1589,7 @@ export const iconsList = [
   },
   {
     category_title: 'Weather',
-    category: 'weawther',
+    category: 'weather',
     icon_list: [
       { label: 'bolt.svg', keyword: 'weather' },
       { label: 'cloud.svg', keyword: 'weather' },
