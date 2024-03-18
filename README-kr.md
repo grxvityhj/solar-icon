@@ -46,9 +46,9 @@ HTML의 `<head>` 안에 다음의 코드를 넣어주세요.
 
 | 속성         | 타입                             | 필수 여부 | 기본값          |
 | ------------ | -------------------------------- | --------- | --------------- |
-| type         | `linear` `bold` `duotone` `bulk` | O         | `linear`        |
+| type         | `linear` `bold` `duotone` `bulk` | X         | `linear`        |
 | stroke-width | `문자열`                         | O         | `1.5`           |
-| icon         | `문자열`                         | X         | `(아이콘 이름)` |
+| icon         | `문자열`                         | O         | `(아이콘 이름)` |
 
 👉 **stroke**과 **fill**은 디폴트로 `currentColor`로 설정돼 있습니다.\
 👉 기타 스타일링은 전혀 포함돼 있지 않습니다.
