@@ -1,0 +1,29 @@
+.search {
+  width: 240px;
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--color-black-900);
+}
+
+.search > input {
+  width: 100%;
+  display: block;
+  padding-left: 16px;
+}
+
+.search > input::placeholder {
+  color: var(--color-black-50);
+  font-size: var(--font-size-sm);
+}
+
+.reset {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,19 @@
+.nav {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: var(--element-bg);
+  transition: background-color var(--transition);
+}
+
+.title {
+  margin-bottom: 12px;
+  font-family: 'Inter';
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}

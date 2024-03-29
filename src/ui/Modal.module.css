@@ -1,0 +1,28 @@
+.modal {
+  width: calc(100%);
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.container {
+  width: 960px;
+  display: flex;
+  gap: 36px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 48px;
+  border-radius: 12px;
+  border: 1px solid var(--color-black-750);
+  background-color: var(--color-black-850);
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+.bg {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.45);
+}

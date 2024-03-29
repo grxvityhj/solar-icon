@@ -1,0 +1,87 @@
+.loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 50px;
+  text-align: center;
+  background: var(--color-black-900);
+  transition: all 0.75s;
+  z-index: 10000;
+}
+
+.loader svg {
+  width: 48px;
+  height: 48px;
+  transform-origin: center;
+  animation: rotate 2s linear infinite;
+}
+
+.loader circle {
+  fill: none;
+  stroke: var(--color-primary-600);
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+.textCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  font-family: 'Inter', 'Pretendard', sans-serif;
+  text-align: center;
+}
+
+.textLarge {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.textLarge,
+.textNormal {
+  line-height: 1;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}

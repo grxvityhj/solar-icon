@@ -1,0 +1,10 @@
+.link:link,
+.link:visited {
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.link:hover,
+.link:active {
+  color: var(--color-primary-600);
+}
