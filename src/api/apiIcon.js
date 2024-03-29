@@ -80,13 +80,13 @@ export async function getIcons({ type, category, query, strokeWidth = '1.5' }) {
   for (const icon of icon_list) {
     let value;
 
-    const res = await fetch(`../icons/${type}/${icon.label}`);
+    const res = await fetch(`../icons/${type}/${icon.label}.svg`);
     const data = await res.text();
 
-    const keyword = `${icon.keyword} ${icon.label.replace(
-      '.svg',
-      ''
-    )} ${icon.label.replace('.svg', '').replace('-', ' ')}`;
+    const keyword = `${icon.keyword} ${icon.label} ${icon.label.replace(
+      '-',
+      ' '
+    )}`;
 
     value = data.replaceAll(
       'stroke-width="1.5"',
@@ -97,7 +97,7 @@ export async function getIcons({ type, category, query, strokeWidth = '1.5' }) {
       if (keyword.includes(query.toLowerCase())) {
         const obj = {
           svg: value,
-          label: icon.label.replace('.svg', ''),
+          label: icon.label,
           keyword,
         };
 
@@ -106,7 +106,7 @@ export async function getIcons({ type, category, query, strokeWidth = '1.5' }) {
     } else {
       const obj = {
         svg: value,
-        label: icon.label.replace('.svg', ''),
+        label: icon.label,
         keyword,
       };
 
