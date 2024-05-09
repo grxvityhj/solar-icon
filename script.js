@@ -50,6 +50,8 @@ window.addEventListener('load', () => {
   const solarIcon = document.querySelectorAll('.solar-icon');
 
   for (const icon of solarIcon) {
+    if (!icon.getAttribute('icon')) continue;
+    
     const label = icon.getAttribute('icon').trim();
     const type = icon.getAttribute('type')
       ? icon.getAttribute('type').trim()
