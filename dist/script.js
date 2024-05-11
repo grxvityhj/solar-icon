@@ -1,11 +1,11 @@
 'use strict';
 
-const URL = 'https://grxvityhj.github.io/solar-icon/icons';
+const BASE_URL = 'https://grxvityhj.github.io/solar-icon/icons';
 
 async function generateSolarIcon(icon, type, iconName, iconWidth) {
   if (!iconName) return;
 
-  const res = await fetch(`${URL}/${type}/${iconName}.svg`);
+  const res = await fetch(`${BASE_URL}/${type}/${iconName}.svg`);
   const data = await res.text();
 
   if (!data.includes('svg')) return;
@@ -50,6 +50,8 @@ window.addEventListener('load', () => {
   const solarIcon = document.querySelectorAll('.solar-icon');
 
   for (const icon of solarIcon) {
+    if (!icon.getAttribute('icon')) continue;
+    
     const label = icon.getAttribute('icon').trim();
     const type = icon.getAttribute('type')
       ? icon.getAttribute('type').trim()
