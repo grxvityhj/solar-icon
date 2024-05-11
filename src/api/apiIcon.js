@@ -2,119 +2,37 @@ import { iconsList } from '../data/iconList';
 import { BASE_URL } from '../utils/constant';
 
 export async function getAllIcons({
-  type,
-  category,
-  query,
+  type = 'linear',
+  category = [],
+  query = '',
   strokeWidth = '1.5',
 }) {
   const fullList = [];
 
-  if (category.length > 1) {
-    for (const cate of category) {
-      const list = iconsList.filter(li => li.category === cate.category);
-      const [{ icon_list, category_title }] = list;
+  if (category.length <= 1) return;
 
-      const temp = {
-        category: cate.category,
-        category_title,
-        svg_list: [],
-      };
+  for (const cate of category) {
+    const data = await fetchFilteredIcons(
+      type,
+      cate.category,
+      query,
+      strokeWidth
+    );
 
-      if (!icon_list) return;
-
-      for (const icon of icon_list) {
-        let value;
-        const res = await fetch(`/${BASE_URL}/icons/${type}/${icon.label}.svg`);
-        const data = await res.text();
-
-        const keyword = `${icon.keyword} ${icon.label} ${icon.label.replace(
-          '-',
-          ' '
-        )}`;
-
-        value = data.replaceAll(
-          'stroke-width="1.5"',
-          `stroke-width="${strokeWidth}"`
-        );
-
-        if (query) {
-          if (keyword.includes(query.toLowerCase())) {
-            const obj = {
-              svg: value,
-              label: icon.label,
-              keyword,
-            };
-
-            temp['svg_list'].push(obj);
-          }
-        } else {
-          const obj = {
-            svg: value,
-            label: icon.label,
-            keyword,
-          };
-
-          temp['svg_list'].push(obj);
-        }
-      }
-
-      fullList.push(temp);
-    }
+    fullList.push(data);
   }
 
   return fullList;
 }
 
-export async function getIcons({ type, category, query, strokeWidth = '1.5' }) {
-  let cate;
-
-  cate = iconsList.filter(li => li.category === category);
-  const [{ category_title, icon_list }] = cate;
-
-  const arr = {
-    category,
-    category_title,
-    svg_list: [],
-  };
-
-  for (const icon of icon_list) {
-    let value;
-
-    const res = await fetch(`../icons/${type}/${icon.label}.svg`);
-    const data = await res.text();
-
-    const keyword = `${icon.keyword} ${icon.label} ${icon.label.replace(
-      '-',
-      ' '
-    )}`;
-
-    value = data.replaceAll(
-      'stroke-width="1.5"',
-      `stroke-width="${strokeWidth}"`
-    );
-
-    if (query) {
-      if (keyword.includes(query.toLowerCase())) {
-        const obj = {
-          svg: value,
-          label: icon.label,
-          keyword,
-        };
-
-        arr['svg_list'].push(obj);
-      }
-    } else {
-      const obj = {
-        svg: value,
-        label: icon.label,
-        keyword,
-      };
-
-      arr['svg_list'].push(obj);
-    }
-  }
-
-  return arr;
+export async function getIcons({
+  type = '',
+  category,
+  query,
+  strokeWidth = '1.5',
+}) {
+  const data = await fetchFilteredIcons(type, category, query, strokeWidth);
+  return [data];
 }
 
 export async function getIcon({ type, icon, strokeWidth = '1.5' }) {
@@ -156,4 +74,33 @@ export function getAllIconCounts() {
     .reduce((cur, acc) => cur + acc, 0);
 
   return all;
+}
+
+async function fetchFilteredIcons(type, category, query, strokeWidth) {
+  let filteredData;
+  const res = await fetch(`/${BASE_URL}/data/${category}.json`);
+  const data = await res.json();
+  [filteredData] = JSON.parse(data);
+
+  filteredData.icon_list = filteredData.icon_list.map(li => {
+    return {
+      label: li.label,
+      keyword: li.keyword,
+      icon: li.svg[type || 'linear'].replaceAll(
+        'stroke-width="1.5"',
+        `stroke-width="${strokeWidth}"`
+      ),
+    };
+  });
+
+  if (query !== '') {
+    [filteredData] = [filteredData].filter(data => {
+      data.icon_list = data.icon_list.filter(li =>
+        li.keyword.includes(query.toLowerCase())
+      );
+      return data;
+    });
+  }
+
+  return filteredData;
 }

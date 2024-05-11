@@ -11,15 +11,15 @@ function IconList() {
 
   if (isLoading) return <Loader />;
 
-  const { category_title, svg_list } = iconList;
+  const [{ category_title, icon_list }] = iconList;
 
   return (
     <section>
       <h2 className={styles.title}>{category_title}</h2>
       <ul className={styles.iconList}>
-        {svg_list.length > 0 &&
-          svg_list?.map(icon => <IconItem key={icon.label} icon={icon} />)}
-        {svg_list.length === 0 && <NoResult />}
+        {icon_list.length > 0 &&
+          icon_list?.map(icon => <IconItem key={icon.label} icon={icon} />)}
+        {icon_list.length === 0 && <NoResult />}
       </ul>
     </section>
   );

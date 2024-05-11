@@ -6,7 +6,7 @@ import Modal from '../ui/Modal';
 import styles from './IconItem.module.css';
 
 function IconItem({ icon }) {
-  const { svg, label, keyword } = icon;
+  const { icon: iconMarkup, label, keyword } = icon;
 
   const params = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -26,7 +26,7 @@ function IconItem({ icon }) {
       <li className={styles.item} onClick={handleItem}>
         <div
           className={styles.svg}
-          dangerouslySetInnerHTML={{ __html: svg }}
+          dangerouslySetInnerHTML={{ __html: iconMarkup }}
         ></div>
         <p className={styles.label}>{label}</p>
       </li>

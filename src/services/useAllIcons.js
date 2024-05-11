@@ -13,10 +13,10 @@ export function useAllIcons() {
   const strokeWidth = searchParams.get('stroke-width') || '1.5';
   const query = searchParams.get('search') || '';
 
-  const { data: svgList, isLoading } = useQuery({
+  const { data: iconsList, isLoading } = useQuery({
     queryKey: ['icons', type, category, strokeWidth, query],
     queryFn: () => getAllIcons({ type, category, strokeWidth, query }),
   });
 
-  return { svgList, isLoading };
+  return { iconsList, isLoading };
 }

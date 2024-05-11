@@ -7,20 +7,17 @@ import { randomID } from '../utils/helper';
 import styles from './IconAll.module.css';
 
 function IconAll() {
-  const { svgList, isLoading } = useAllIcons();
+  const { iconsList, isLoading } = useAllIcons();
 
   if (isLoading) return <Loader />;
 
   return (
     <>
-      {svgList?.map(li => (
-        <section
-          key={li.category ? li.category : randomID()}
-          className={styles.section}
-        >
+      {iconsList?.map(li => (
+        <section key={li.category || randomID()} className={styles.section}>
           <h2 className={styles.title}>{li.category_title}</h2>
           <ul className={styles.iconList}>
-            {li.svg_list?.map(icon => (
+            {li.icon_list?.map(icon => (
               <IconItem
                 key={icon.label ? icon.label : li.category_title}
                 icon={icon}
